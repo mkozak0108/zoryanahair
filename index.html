@@ -20,12 +20,12 @@
       font-family: 'Source Sans Pro', sans-serif;
       font-size: 18px;
       width: 21cm;
-      height: 29.7cm;
+      min-height: 29.7cm;
       margin: 0.5cm auto;
       box-shadow: 0 0 3px rgba(0,0,0,0.3);
       background-color: #faf9f9;
       color: rgba(0,0,0,0.8);
-      padding: 20px 40px;
+      padding: 20px 40px 200px 40px;
       box-sizing: border-box;
       position: relative;
       letter-spacing: 1px;
@@ -37,10 +37,14 @@
       display: block;
     }
 
-    h1, h2 {
+    .header {
       font-family: 'Source Code Pro', monospace;
       text-transform: uppercase;
       letter-spacing: 2px;
+    }
+
+    h2 small {
+      font-size: 0.55em;
     }
 
     h1 {
@@ -53,6 +57,7 @@
       font-size: 75px;
       position: relative;
       display: inline-block;
+      color: black;
     }
 
     .z {
@@ -112,9 +117,9 @@
     .line {
       width: 6px;
       position: absolute;
-      top: 18%;
+      top: 200px;
       right: 180px;
-      height: 66%;
+      height: calc(100% - 380px);
       background: #cbab96;
       opacity: 0.8;
     }
@@ -153,7 +158,6 @@
         width: 100%;
         margin: 0;
         min-height: 100vh;
-        height: 29.7cm;
       }
     }
 
@@ -163,17 +167,15 @@
       }
 
       .line {
-        top: 12%;
         right: 230px;
-        height: 66%;
       }
     }
   </style>
 </head>
 <body>
-  <h1>Прайс Лист</h1>
+  <h1 class="header">Прайс Лист</h1>
 
-  <h2>Стрижки і укладки</h2>
+  <h2 class="header">Стрижки і укладки</h2>
 
   <div class="line"></div>
   <table>
@@ -203,7 +205,7 @@
     </tr>
   </table>
 
-  <h2>Процедури для волосся</h2>
+  <h2 class="header">Процедури для волосся</h2>
   <table>
     <tr>
       <td>Пілінг шкіри голови <small>(входить миття + укладка)</small></td>
@@ -232,6 +234,41 @@
     <tr>
       <td>Нанопластика BB|One</td>
       <td>₴1000 - 2000</td>
+    </tr>
+  </table>
+
+  <h2>
+    <div class="header">Фарбування</div>
+    <small>(за більш детальною інформацією звертайтесь за консультацією)</small>
+  </h2>
+  <table>
+    <tr>
+      <td>Тон в тон <small>(в залежності від густини та довжини)</small></td>
+      <td>₴900 - 1500</td>
+    </tr>
+    <tr>
+      <td>Коренів</td>
+      <td>₴850 - 1100</td>
+    </tr>
+    <tr>
+      <td>Знебарвлення волосся</td>
+      <td>₴1400 - 2200</td>
+    </tr>
+    <tr>
+      <td>Складні техніки <small>(малірування, balayage, air touch, shatush)</small></td>
+      <td>₴1900 - 2800</td>
+    </tr>
+    <tr>
+      <td>Twin system</td>
+      <td>₴2000 - 3000</td>
+    </tr>
+    <tr>
+      <td>Тонування волосся</td>
+      <td>₴1000 - 1500</td>
+    </tr>
+    <tr>
+      <td>Тонування пінними банями</td>
+      <td>₴1000 - 1500</td>
     </tr>
   </table>
 
